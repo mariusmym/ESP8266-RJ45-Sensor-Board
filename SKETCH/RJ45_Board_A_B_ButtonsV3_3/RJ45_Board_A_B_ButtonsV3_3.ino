@@ -42,8 +42,8 @@ DallasTemperature sensors(&oneWire);
 
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
 
-const char* ssid = "Net_Moca_2G";    //your SSID
-const char* password = "almar#123";  //your password
+const char* ssid = "YOUR_SSID";    //your SSID
+const char* password = "YOUR_PASSWORD";  //your password
 
 int status = WL_IDLE_STATUS;
 WiFiClient client;
