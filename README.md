@@ -108,7 +108,7 @@ Full BOM in the **GERBER, BOM, PNP** folder.
 
 ## 3D-printable case 
 
-The case is in the **STL FILES and F3Z** folder, and also on Printables: https://www.printables.com/model/1869994-esp8266-rj45-sensor-board-case
+The case is on Printables: https://www.printables.com/model/1869994-esp8266-rj45-sensor-board-case
 
 It has a window for the display, labels for the A / B buttons, numbers for the five ports, and holes for the buzzer, so it can beep at you without being muffled.
 
@@ -119,10 +119,9 @@ It has a window for the display, labels for the A / B buttons, numbers for the f
 
 ## Repository content 
 
-- **GERBER, BOM, PNP** – everything needed to order the PCB from JLCPCB or your favorite fab.
-- **SCHEMATIC** – the schematic in PDF.
+- **GERBER, BOM, PNP** – everything needed to order the PCB from your favorite fab.
+- **SCHEMATIC** – the schematic.
 - **SKETCH** – the Arduino sketch (v3.3) and `graphic.c` (a 64x64 check-mark bitmap for the display).
-- **STL FILES and F3Z** – the 3D-printable case, plus the Fusion 360 file.
 - **Images** – photos.
 
 ![Board with port LEDs](Images/board_leds_on_wide.jpg)
