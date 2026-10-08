@@ -88,15 +88,15 @@ Want MQTT, Home Assistant, a web page, a working temperature alarm, or a beep wh
 
 | Part | Component | LCSC |
 |---|---|---|
-| MCU | ESP-12F (ESP8266) | [C89297](https://www.lcsc.com/product-detail/C89297.html) |
-| RJ45 jacks (x5) | RCH RC02115 | [C708657](https://www.lcsc.com/product-detail/C708657.html) |
-| 5V regulator | AMS1117-5.0 | [C6187](https://www.lcsc.com/product-detail/C6187.html) |
-| 3.3V regulator | AMS1117-3.3 | [C2688239](https://www.lcsc.com/product-detail/C2688239.html) |
-| Resettable fuse | Bourns MF-NSMF050-2 | [C75464](https://www.lcsc.com/product-detail/C75464.html) |
-| DIP switch | XKB DS-05BLP | [C692503](https://www.lcsc.com/product-detail/C692503.html) |
-| DC jack | XKB DC-005I-5A-2.5 | [C2689704](https://www.lcsc.com/product-detail/C2689704.html) |
-| Screw terminal | KF301-5.0-2P | [C474881](https://www.lcsc.com/product-detail/C474881.html) |
-| Buttons (A, B, Reset) | ST-1188 | [C589212](https://www.lcsc.com/product-detail/C589212.html) |
+| MCU | ESP-12F (ESP8266) | C89297 |
+| RJ45 jacks (x5) | RCH RC02115 | C708657 |
+| 5V regulator | AMS1117-5.0 | C6187 |
+| 3.3V regulator | AMS1117-3.3 | C2688239 |
+| Resettable fuse | Bourns MF-NSMF050-2 | C75464 |
+| DIP switch | XKB DS-05BLP | C692503 |
+| DC jack | XKB DC-005I-5A-2.5 | C2689704 |
+| Screw terminal | KF301-5.0-2P | C474881 |
+| Buttons (A, B, Reset) | ST-1188 | C589212 |
 
 Full BOM in the **GERBER, BOM, PNP** folder.
 
