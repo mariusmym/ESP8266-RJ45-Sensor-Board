@@ -77,7 +77,11 @@ Leave an edit screen alone for 60 seconds and it exits without saving. The readi
  
 ## What's new in firmware 4.2 
  
-### Web dashboard (v4.1)
+### Web dashboard
+
+<p align="center">
+  <img src="Images/webpage.png" width="600" alt="ESP8266 RJ45 Sensor Board">
+</p>
  
 The board now runs its own web page on your local network. Open **`http://192.168.1.50`** (or whatever IP you set) or **`http://rj45-board.local`** in any browser, on your PC or your phone:
  
@@ -107,7 +111,7 @@ The fixed IP has to be in your router's subnet and **outside its DHCP range**, o
 | `GET /api/history` | The last 12 h of readings (tenths of a degree, 2 min apart) |
 | `POST /api/ack` | Silences the active alarms |
  
-### Sturdier sensor readings (v4.2)
+### Sturdier sensor readings
  
 - **Every reading is retried up to 3 times**, and a sensor is only marked as an error after **3 failed readings in a row**. Meanwhile it keeps showing the last good value, so one bad bit on a long cable doesn't set off the "sensor lost" alarm.
 - **The famous 85.0 °C glitch** (the value a DS18B20 reports right after power-on) is only rejected when it's a sudden jump, so a sensor that really is at 85 °C still gets believed.
