@@ -1,6 +1,6 @@
 # ESP8266 RJ45 Sensor Board
 
-An ESP8266-powered sensor hub with **five RJ45 ports** for **DS18B20 temperature sensors**, plus an I2C connector for **BMP / BME280 / SHT31** sensors. Your sensors connect with plain network cables, so they can live in the next room, in the greenhouse, or inside the beehive, while the board sits comfortably on your desk.
+An ESP8266-powered sensor hub with **five RJ45 ports** for **DS18B20 temperature sensors**, plus an I2C connector for **BMP / BME280 / SHT31** sensors. Your sensors connect with plain network cables, so they can live in the next room, in the greenhouse, or inside the beehive.
 
 <p align="center">
   <img src="Images/board_with_cable.jpg" width="600" alt="ESP8266 RJ45 Sensor Board">
@@ -98,7 +98,7 @@ Want MQTT, Home Assistant, a web page, a working temperature alarm, or a beep wh
 | Screw terminal | KF301-5.0-2P | [C474881](https://www.lcsc.com/product-detail/C474881.html) |
 | Buttons (A, B, Reset) | ST-1188 | [C589212](https://www.lcsc.com/product-detail/C589212.html) |
 
-Full BOM: [`BOM_ESP8266-RJ45_Sensor_Board.csv`](BOM_ESP8266-RJ45_Sensor_Board.csv) (also in the **GERBER, BOM, PNP** folder).
+Full BOM in the **GERBER, BOM, PNP** folder.
 
 **Not on LCSC, you'll need:**
 - **DS18B20 sensors** (the waterproof probe version is perfect), wired to RJ45 plugs or keystone jacks
