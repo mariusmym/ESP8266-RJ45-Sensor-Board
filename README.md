@@ -39,7 +39,7 @@ Why RJ45? Because Ethernet cables are cheap, sturdy, come in every length imagin
 
 5. **Put your own Wi-Fi name and password** in the sketch (`YOUR_WIFI_SSID` / `YOUR_WIFI_PASSWORD`) before uploading.
 
-## The firmware 💾
+## The firmware 
 
 The sketch in the **SKETCH** folder (v3.3) gives you an OLED menu driven by the two buttons:
 
@@ -80,11 +80,11 @@ Board: **Generic ESP8266 Module** or **NodeMCU 1.0 (ESP-12E Module)** from the E
 | Buzzer | 13 |
 | I2C (OLED, sensors) | SDA 4 / SCL 5 |
 
-### Make it yours 🤖
+### Make it yours 
 
-Want MQTT, Home Assistant, a web page, a working temperature alarm, or a beep when the greenhouse gets too cold? Upload the sketch to [Claude](https://claude.ai) and tell it what you want. It'll hand you back the updated code.
+Want MQTT, Home Assistant, a web page, a working temperature alarm, or a beep when the greenhouse gets too cold? Upload the sketch to any AI tool, tell it what you want. It'll hand you back the updated code (hopefully).
 
-## Main components 🔩
+## Main components 
 
 | Part | Component | LCSC |
 |---|---|---|
@@ -106,7 +106,7 @@ Full BOM: [`BOM_ESP8266-RJ45_Sensor_Board.csv`](BOM_ESP8266-RJ45_Sensor_Board.cs
 - **Optional:** BMP280 / BME280 / SHT31 I2C sensor
 - A **12V power supply** and some **Ethernet cables** (check the drawer)
 
-## 3D-printable case 🧩
+## 3D-printable case 
 
 The case is in the **STL FILES and F3Z** folder, and also on Printables: https://www.printables.com/model/1869994-esp8266-rj45-sensor-board-case
 
@@ -117,7 +117,7 @@ It has a window for the display, labels for the A / B buttons, numbers for the f
   <img src="Images/case_bottom.jpg" width="49%" alt="Case, bottom">
 </p>
 
-## Repository content 📂
+## Repository content 
 
 - **GERBER, BOM, PNP** – everything needed to order the PCB from JLCPCB or your favorite fab.
 - **SCHEMATIC** – the schematic in PDF.
@@ -127,13 +127,12 @@ It has a window for the display, labels for the A / B buttons, numbers for the f
 
 ![Board with port LEDs](Images/board_leds_on_wide.jpg)
 
-## License 📜
+## License 
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 This project is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
 
-In human words:
 - ✅ **Share** – copy and redistribute it in any medium or format
 - ✅ **Adapt** – remix, transform, and build upon it
 - 🏷️ **Attribution** – give credit and link back here
