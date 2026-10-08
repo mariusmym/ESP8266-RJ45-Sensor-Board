@@ -40,9 +40,9 @@ Why RJ45? Because Ethernet cables are cheap, sturdy, come in every length imagin
 5. **Put your own Wi-Fi name and password** in `secrets.h` (`YOUR_WIFI_SSID` / `YOUR_WIFI_PASS`) before uploading. They live in a separate file so you can share the sketch without sharing your Wi-Fi with the whole internet.
 
 ## The firmware 
-
-The sketch in the **SKETCH** folder (**v4.0**) turns the board into a proper little temperature station:
-
+ 
+The sketch in the **SKETCH** folder (**v4.2**) turns the board into a proper little temperature station:
+ 
 - **Non-blocking readings** – the buttons respond instantly, even while the sensors are busy.
 - **Hot-plug** – the 1-Wire bus is rescanned every 30 s, so you can add or swap sensors without restarting. Each sensor is tracked by its unique ROM address.
 - **Min / max and a trend arrow** for every sensor (the arrow shows up when the temperature moves more than 0.2 °C per minute).
@@ -50,9 +50,8 @@ The sketch in the **SKETCH** folder (**v4.0**) turns the board into a proper lit
 - **Settings and alarms are saved in flash**, so they survive a power cut.
 - **Automatic clock** – the time syncs over Wi-Fi with automatic summer/winter time. It's set for Romania; change `TZ_INFO` in the sketch for your time zone.
 - **Screen-off timer**, adjustable contrast, and a big check mark every time you save something. Everyone deserves a little validation.
-
 ### Menu
-
+ 
 | Menu item | What it shows |
 |---|---|
 | **Overview** | All five sensors (plus the ambient sensor) on one screen; sensors in alarm blink |
@@ -60,12 +59,12 @@ The sketch in the **SKETCH** folder (**v4.0**) turns the board into a proper lit
 | **Ambient** | Temperature + humidity (SHT31) or temperature + humidity + pressure (BME280). Only appears when one of them is connected |
 | **Alarms** | Per sensor: alarm ON/OFF, HIGH limit, LOW limit |
 | **Settings** | Key beep, alarm sound, screen off (never / 1 / 5 / 15 / 30 min), contrast |
-| **Info** | IP address, Wi-Fi signal and channel, uptime, NTP status, sensor count, firmware version |
-
+| **Info** | IP address, Wi-Fi signal and channel, uptime, NTP status, sensor count, firmware version, 1-Wire power mode and total read errors |
+ 
 ### Controls
-
+ 
 **A** is the left button, **B** is the right one. Tap = short press, hold = long press.
-
+ 
 | Where | A | B |
 |---|---|---|
 | **Menu** | tap: next item · hold: previous | tap: open |
@@ -73,8 +72,56 @@ The sketch in the **SKETCH** folder (**v4.0**) turns the board into a proper lit
 | **Alarms / Settings** | tap: + / toggle · hold: − (repeats, speeds up after ~2 s) | tap: next field · hold: **SAVE** & exit |
 | **Alarm ringing** | any button: acknowledge | any button: acknowledge |
 | **Screen off** | any button wakes it up | any button wakes it up |
-
+ 
 Leave an edit screen alone for 60 seconds and it exits without saving. The readings are also printed to the serial monitor (115200 baud) every 10 seconds.
+ 
+## What's new in firmware 4.2 
+ 
+### Web dashboard (v4.1)
+ 
+The board now runs its own web page on your local network. Open **`http://192.168.1.50`** (or whatever IP you set) or **`http://rj45-board.local`** in any browser, on your PC or your phone:
+ 
+- **Live sensor cards** for T1–T5 and the ambient sensor, refreshed every 2 seconds, with min / max, trend arrows, alarm limits and each sensor's ROM address.
+- **Alarm banner** with a **Silence** button, so you can shut the buzzer up from the couch. The browser tab title also shows ⚠ ALARM.
+- **12-hour history chart** (one point every 2 minutes) for all sensors. Click a sensor in the legend to hide or show its line.
+- **No internet needed.** The page is stored in the ESP's flash, with no external libraries or CDNs, so it works even on a network with no internet connection.
+- **Gruvbox dark theme with monospace fonts**, because a temperature monitor should look like it means business.
+**Setting up the address** – in `secrets.h`:
+ 
+```cpp
+#define USE_STATIC_IP
+#define STATIC_IP    192, 168, 1, 50   // pick a free address in your network
+#define STATIC_GW    192, 168, 1, 1    // your router
+#define STATIC_MASK  255, 255, 255, 0
+#define STATIC_DNS   192, 168, 1, 1    // usually the router; needed for NTP
+#define MDNS_NAME "rj45-board"
+```
+ 
+The fixed IP has to be in your router's subnet and **outside its DHCP range**, otherwise the router may hand the same address to your neighbour's... sorry, your own phone. Check your network with `ipconfig` (Windows) or `ip a` (Linux/macOS). If you'd rather let the router decide, comment out `USE_STATIC_IP` and use `http://rj45-board.local`.
+ 
+**JSON API**, for Home Assistant, Node-RED, or your own scripts:
+ 
+| Endpoint | What it does |
+|---|---|
+| `GET /api/data` | Current readings, alarms, min/max, trend, Wi-Fi, uptime |
+| `GET /api/history` | The last 12 h of readings (tenths of a degree, 2 min apart) |
+| `POST /api/ack` | Silences the active alarms |
+ 
+### Sturdier sensor readings (v4.2)
+ 
+- **Every reading is retried up to 3 times**, and a sensor is only marked as an error after **3 failed readings in a row**. Meanwhile it keeps showing the last good value, so one bad bit on a long cable doesn't set off the "sensor lost" alarm.
+- **The famous 85.0 °C glitch** (the value a DS18B20 reports right after power-on) is only rejected when it's a sudden jump, so a sensor that really is at 85 °C still gets believed.
+- **Diagnostics** – every sensor counts its reads and errors and remembers its last bad value. You'll find them on the web cards, on the OLED **Info** screen and in the serial monitor.
+- **Parasite-power detection** – the board tells you if any sensor is running in 2-wire (parasite) mode.
+### Sensor troubleshooting 
+ 
+If the error counter keeps going up, the last bad value tells you why:
+ 
+| Last bad value | What it means | What to check |
+|---|---|---|
+| **-127** | The sensor didn't answer, or the data failed its CRC check | Wiring, a loose RJ45 plug, the 4.7k pull-up, a very long or poor-quality cable |
+| **85** | The sensor powered up but never finished a measurement | Power to the sensor, or it's running in parasite mode (use 3 wires: VCC, GND, DATA) |
+| **PARA** on the Info screen | At least one sensor is in parasite (2-wire) mode | Connect the sensor's VCC wire; parasite mode and long cables don't get along |
 
 ### Libraries
 
