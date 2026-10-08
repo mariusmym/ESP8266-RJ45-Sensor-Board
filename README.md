@@ -27,7 +27,7 @@ Why RJ45? Because Ethernet cables are cheap, sturdy, come in every length imagin
   <img src="Images/board_leds_on.jpg" width="49%" alt="Board powered on, port LEDs lit">
 </p>
 
-## IMPORTANT INFORMATIONS ! ⚠️
+## IMPORTANT INFORMATIONS ! 
 
 1. **Power it from 12V** (DC jack or screw terminal). The onboard regulators take it from there. The 5V regulator is a linear AMS1117, so it gets warm from 12V; that's normal, it just means it's working hard so you don't have to.
 
@@ -127,7 +127,7 @@ Full BOM in the **GERBER, BOM, PNP** folder.
 
 ## 3D-printable case 
 
-The case is in the **STL FILES and F3Z** folder, and also on Printables: https://www.printables.com/model/1869994-esp8266-rj45-sensor-board-case
+The case is on Printables: https://www.printables.com/model/1869994-esp8266-rj45-sensor-board-case
 
 It has a window for the display, labels for the A / B buttons, numbers for the five ports, and holes for the buzzer, so it can beep at you without being muffled.
 
@@ -141,7 +141,6 @@ It has a window for the display, labels for the A / B buttons, numbers for the f
 - **GERBER, BOM, PNP** – everything needed to order the PCB from JLCPCB or your favorite fab.
 - **SCHEMATIC** – the schematic in PDF.
 - **SKETCH** – the Arduino sketch (v4.0), `secrets.h` (your Wi-Fi credentials) and `graphic.h` (the 64x64 check mark).
-- **STL FILES and F3Z** – the 3D-printable case, plus the Fusion 360 file.
 - **Images** – photos.
 
 ![Board with port LEDs](Images/board_leds_on_wide.jpg)
