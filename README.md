@@ -330,11 +330,10 @@ Firmware **4.2** (`SKETCH/RJ45_Board_A_B_ButtonsV4_2`) is still there if you nee
 |---|---|
 | **5.0** | Plug & play sensors (DS18B20, SHT3x, SHT4x, AHT2x, BME280, BMP280, MAX6675), 8 sensor slots, humidity / dew point / pressure everywhere, calibration offsets, 10-minute flash log with CSV export, SPI port mode, Device panel, built-in sensor drivers |
 | **4.2** | Web dashboard, JSON API, fixed IP + mDNS, 12 h history chart, sturdier DS18B20 readings and diagnostics |
-| **4.0** | Non-blocking readings, hot-plug, alarms, overview / ambient / info screens, settings saved in flash, NTP time |
 
 ### Make it yours 
 
-Want MQTT, Home Assistant, or a push notification when the greenhouse gets too cold? Upload the sketch to any AI tool, tell it what you want. It'll hand you back the updated code (hopefully).
+Want MQTT, Home Assistant, or a push notification when the greenhouse gets too cold? Get your hands "dirty" and do it yourself ! :)
 
 ## Main components 
 
