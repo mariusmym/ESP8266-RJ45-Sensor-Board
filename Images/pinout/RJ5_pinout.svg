@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="416" viewBox="0 0 860 416" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Consolas,monospace">
+<title>RJ5 pinout: SPI + 1-WIRE</title>
+<defs>
+<pattern id="s1" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2efe6"/><rect width="5" height="10" fill="#e8822a"/></pattern>
+<pattern id="s3" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2efe6"/><rect width="5" height="10" fill="#3fa34d"/></pattern>
+<pattern id="s5" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2efe6"/><rect width="5" height="10" fill="#3b6fd4"/></pattern>
+<pattern id="s7" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2efe6"/><rect width="5" height="10" fill="#8a5a2b"/></pattern>
+<radialGradient id="g" cx="50%" cy="0%" r="80%"><stop offset="0" stop-color="#8ec07c" stop-opacity=".08"/><stop offset="1" stop-color="#8ec07c" stop-opacity="0"/></radialGradient></defs>
+<rect x=".5" y=".5" width="859" height="415" rx="6" fill="#1d2021" stroke="#504945"/><rect x="1" y="1" width="858" height="160" rx="6" fill="url(#g)"/>
+<rect x="1" y="1" width="858" height="3" fill="#8ec07c"/>
+<text x="28" y="56" font-size="34" font-weight="900" fill="#fbf1c7" letter-spacing="-1">RJ5</text>
+<text x="112" y="44" font-size="13" font-weight="700" fill="#8ec07c" letter-spacing="2">SPI + 1-WIRE</text>
+<text x="112" y="64" font-size="12" fill="#a89984">MAX6675 (SPI port mode) · DS18B20</text>
+<rect x="30" y="112" width="150" height="260" rx="4" fill="#32302f" stroke="#504945"/>
+<rect x="94" y="120" width="74" height="244" rx="3" fill="#282828" stroke="#665c54"/>
+<text x="44" y="248.0" font-size="10" fill="#928374" letter-spacing="1.5" transform="rotate(-90 44 248.0)" text-anchor="middle">RJ45 JACK</text>
+<text x="196" y="100" font-size="10" fill="#928374" letter-spacing="1.6">PIN</text>
+<text x="236" y="100" font-size="10" fill="#928374" letter-spacing="1.6">WIRE (T568B)</text>
+<text x="388" y="100" font-size="10" fill="#928374" letter-spacing="1.6">SIGNAL</text>
+<text x="470" y="100" font-size="10" fill="#928374" letter-spacing="1.6">ESP</text>
+<text x="556" y="100" font-size="10" fill="#928374" letter-spacing="1.6">NOTES</text>
+<rect x="188" y="119.0" width="654" height="30" rx="3" fill="#282828"/>
+<rect x="102" y="131.0" width="58" height="6" rx="1" fill="#504945" opacity="0.45"/>
+<text x="78" y="138.0" font-size="11" fill="#a89984" text-anchor="end">1</text>
+<line x1="162" y1="134.0" x2="190" y2="134.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="139.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">1</text>
+<rect x="236" y="128.0" width="40" height="12" rx="6" fill="url(#s1)" stroke="#00000055"/>
+<text x="284" y="138.0" font-size="11" fill="#a89984">white/orange</text>
+<rect x="388" y="124.0" width="70" height="20" rx="2" fill="#665c54" opacity="0.35"/>
+<text x="423" y="138.0" font-size="12" font-weight="700" fill="#a89984" text-anchor="middle">—</text>
+<text x="470" y="138.0" font-size="12" fill="#928374"></text>
+<text x="556" y="138.0" font-size="11" fill="#928374">not connected</text>
+<rect x="102" y="163.0" width="58" height="6" rx="1" fill="#8ec07c" opacity="1"/>
+<text x="78" y="170.0" font-size="11" fill="#a89984" text-anchor="end">2</text>
+<line x1="162" y1="166.0" x2="190" y2="166.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="171.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">2</text>
+<rect x="236" y="160.0" width="40" height="12" rx="6" fill="#e8822a" stroke="#00000055"/>
+<text x="284" y="170.0" font-size="11" fill="#a89984">orange</text>
+<rect x="388" y="156.0" width="70" height="20" rx="2" fill="#8ec07c" opacity="1"/>
+<text x="423" y="170.0" font-size="12" font-weight="700" fill="#1d2021" text-anchor="middle">DQ</text>
+<text x="470" y="170.0" font-size="12" fill="#ebdbb2">IO0</text>
+<text x="556" y="170.0" font-size="11" fill="#d5c4a1">1-Wire data · 4.7k pull-up to this port&#x27;s VCC</text>
+<rect x="188" y="183.0" width="654" height="30" rx="3" fill="#282828"/>
+<rect x="102" y="195.0" width="58" height="6" rx="1" fill="#504945" opacity="0.45"/>
+<text x="78" y="202.0" font-size="11" fill="#a89984" text-anchor="end">3</text>
+<line x1="162" y1="198.0" x2="190" y2="198.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="203.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">3</text>
+<rect x="236" y="192.0" width="40" height="12" rx="6" fill="url(#s3)" stroke="#00000055"/>
+<text x="284" y="202.0" font-size="11" fill="#a89984">white/green</text>
+<rect x="388" y="188.0" width="70" height="20" rx="2" fill="#665c54" opacity="0.35"/>
+<text x="423" y="202.0" font-size="12" font-weight="700" fill="#a89984" text-anchor="middle">—</text>
+<text x="470" y="202.0" font-size="12" fill="#928374"></text>
+<text x="556" y="202.0" font-size="11" fill="#928374">not connected</text>
+<rect x="102" y="227.0" width="58" height="6" rx="1" fill="#fb4934" opacity="1"/>
+<text x="78" y="234.0" font-size="11" fill="#a89984" text-anchor="end">4</text>
+<line x1="162" y1="230.0" x2="190" y2="230.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="235.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">4</text>
+<rect x="236" y="224.0" width="40" height="12" rx="6" fill="#3b6fd4" stroke="#00000055"/>
+<text x="284" y="234.0" font-size="11" fill="#a89984">blue</text>
+<rect x="388" y="220.0" width="70" height="20" rx="2" fill="#fb4934" opacity="1"/>
+<text x="423" y="234.0" font-size="12" font-weight="700" fill="#1d2021" text-anchor="middle">VCC</text>
+<text x="470" y="234.0" font-size="12" fill="#ebdbb2">VCC-RJ5</text>
+<text x="556" y="234.0" font-size="11" fill="#d5c4a1">DIP switch 5 on → 3.3 V / 5 V (JP1)</text>
+<rect x="188" y="247.0" width="654" height="30" rx="3" fill="#282828"/>
+<rect x="102" y="259.0" width="58" height="6" rx="1" fill="#d3869b" opacity="1"/>
+<text x="78" y="266.0" font-size="11" fill="#a89984" text-anchor="end">5</text>
+<line x1="162" y1="262.0" x2="190" y2="262.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="267.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">5</text>
+<rect x="236" y="256.0" width="40" height="12" rx="6" fill="url(#s5)" stroke="#00000055"/>
+<text x="284" y="266.0" font-size="11" fill="#a89984">white/blue</text>
+<rect x="388" y="252.0" width="70" height="20" rx="2" fill="#d3869b" opacity="1"/>
+<text x="423" y="266.0" font-size="12" font-weight="700" fill="#1d2021" text-anchor="middle">SCK</text>
+<text x="470" y="266.0" font-size="12" fill="#ebdbb2">IO14</text>
+<text x="556" y="266.0" font-size="11" fill="#d5c4a1">SPI clock · shared with button B (jumper U8)</text>
+<rect x="102" y="291.0" width="58" height="6" rx="1" fill="#d3869b" opacity="1"/>
+<text x="78" y="298.0" font-size="11" fill="#a89984" text-anchor="end">6</text>
+<line x1="162" y1="294.0" x2="190" y2="294.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="299.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">6</text>
+<rect x="236" y="288.0" width="40" height="12" rx="6" fill="#3fa34d" stroke="#00000055"/>
+<text x="284" y="298.0" font-size="11" fill="#a89984">green</text>
+<rect x="388" y="284.0" width="70" height="20" rx="2" fill="#d3869b" opacity="1"/>
+<text x="423" y="298.0" font-size="12" font-weight="700" fill="#1d2021" text-anchor="middle">SO</text>
+<text x="470" y="298.0" font-size="12" fill="#ebdbb2">IO13</text>
+<text x="556" y="298.0" font-size="11" fill="#d5c4a1">MAX6675 data · shared with buzzer (jumper U9)</text>
+<rect x="188" y="311.0" width="654" height="30" rx="3" fill="#282828"/>
+<rect x="102" y="323.0" width="58" height="6" rx="1" fill="#d3869b" opacity="1"/>
+<text x="78" y="330.0" font-size="11" fill="#a89984" text-anchor="end">7</text>
+<line x1="162" y1="326.0" x2="190" y2="326.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="331.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">7</text>
+<rect x="236" y="320.0" width="40" height="12" rx="6" fill="url(#s7)" stroke="#00000055"/>
+<text x="284" y="330.0" font-size="11" fill="#a89984">white/brown</text>
+<rect x="388" y="316.0" width="70" height="20" rx="2" fill="#d3869b" opacity="1"/>
+<text x="423" y="330.0" font-size="12" font-weight="700" fill="#1d2021" text-anchor="middle">CS</text>
+<text x="470" y="330.0" font-size="12" fill="#ebdbb2">IO15</text>
+<text x="556" y="330.0" font-size="11" fill="#d5c4a1">chip select · 10k pull-down, boot pin</text>
+<rect x="102" y="355.0" width="58" height="6" rx="1" fill="#928374" opacity="1"/>
+<text x="78" y="362.0" font-size="11" fill="#a89984" text-anchor="end">8</text>
+<line x1="162" y1="358.0" x2="190" y2="358.0" stroke="#504945" stroke-dasharray="2 3"/>
+<text x="206" y="363.0" font-size="15" font-weight="900" fill="#fbf1c7" text-anchor="middle">8</text>
+<rect x="236" y="352.0" width="40" height="12" rx="6" fill="#8a5a2b" stroke="#00000055"/>
+<text x="284" y="362.0" font-size="11" fill="#a89984">brown</text>
+<rect x="388" y="348.0" width="70" height="20" rx="2" fill="#928374" opacity="1"/>
+<text x="423" y="362.0" font-size="12" font-weight="700" fill="#1d2021" text-anchor="middle">GND</text>
+<text x="470" y="362.0" font-size="12" fill="#ebdbb2">GND</text>
+<text x="556" y="362.0" font-size="11" fill="#d5c4a1">ground</text>
+<text x="30" y="404" font-size="11" fill="#a89984">Port LED (pins 9/10): on when DIP switch 5 powers the port.  Wire colours: T568B, the usual patch-cable standard.</text>
+</svg>
