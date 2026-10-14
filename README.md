@@ -372,7 +372,7 @@ It has a window for the display, labels for the A / B buttons, numbers for the f
 
 - **GERBER, BOM, PNP** – everything needed to order the PCB from JLCPCB or your favorite fab.
 - **SCHEMATIC** – the schematic as a PNG.
-- **SKETCH** – the Arduino sketches: **v5.0** (`RJ45_Board_V5_0`, with its sensor drivers in `src/sensors/`) and the older v4.2 / v4.0. Each comes with `secrets.h` (your Wi-Fi credentials), `graphic.h` (the 64x64 check mark) and, from v4.2 on, `webpage.h` (the dashboard).
+- **SKETCH** – the Arduino sketches: **v5.0** (`RJ45_Board_V5_0`, with its sensor drivers in `src/sensors/`) and the older v4.2. Each comes with `secrets.h` (your Wi-Fi credentials), `graphic.h` (the 64x64 check mark) and `webpage.h` (the dashboard).
 - **Images** – photos, and the port pinout diagrams in `Images/pinout/`.
 
 ![Board with port LEDs](Images/board_leds_on_wide.jpg)
